@@ -1,0 +1,8 @@
+{
+  "name": "konachan-crawler",
+  "packageManager": "yarn@3.3.0",
+  "version": "1.0.0",
+  "devDependencies": {
+    "rome": "^11.0.0"
+  }
+}
