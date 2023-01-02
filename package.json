@@ -1,8 +1,14 @@
 {
-  "name": "konachan-crawler",
+  "name": "moebooru-bot-nodejs",
+  "description": "A Telegram bot that automatically updates top-rated pics from sites running Moebooru",
   "packageManager": "yarn@3.3.0",
   "version": "1.0.0",
   "devDependencies": {
+    "@types/node-telegram-bot-api": "^0.57.6",
     "rome": "^11.0.0"
+  },
+  "dependencies": {
+    "got": "^12.5.3",
+    "node-telegram-bot-api": "^0.60.0"
   }
 }
