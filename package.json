@@ -3,6 +3,7 @@
   "description": "A Telegram bot that automatically updates top-rated pics from sites running Moebooru",
   "packageManager": "yarn@3.3.0",
   "version": "1.0.0",
+  "type": "module",
   "devDependencies": {
     "@types/node-telegram-bot-api": "^0.57.6",
     "rome": "^11.0.0"
