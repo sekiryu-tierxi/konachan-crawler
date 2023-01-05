@@ -12,5 +12,9 @@
     "got": "^12.5.3",
     "level": "^8.0.0",
     "node-telegram-bot-api": "^0.60.0"
+  },
+  "bin": "src/main.js",
+  "scripts": {
+    "main": "node src/main.js"
   }
 }
