@@ -19,7 +19,7 @@ corepack enable
 
 Then, clone the repository and run the program:
 ```sh
-git clone https://github.com/sekiryu-tierxi/konachan-popular-node
+git clone https://github.com/sekiryu-tierxi/konachan-popular-node.git --depth 1
 cd konachan-popular-node
 yarn start -c [CHAT_ID] -t [TOKEN] -b [moebooru_INSTANCE]
 ```
