@@ -1,6 +1,8 @@
 import cac from 'cac'
 import { Telegram } from './telegram-api.js'
 
+process.env["NTBA_FIX_350"] = 1  // suppress MIME type warning
+
 const cli = cac('konachan-bot')
 
 cli.option('-b, --base-url <baseUrl>', 'Set the moebooru instance URL', {
