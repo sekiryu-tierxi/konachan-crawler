@@ -1569,7 +1569,7 @@ __metadata:
     cac: ^6.7.14
     got: ^12.5.3
     level: ^8.0.0
-    node-telegram-bot-api: ^0.60.0
+    node-telegram-bot-api: ^0.61.0
     rome: ^11.0.0
   bin:
     moebooru-bot-nodejs: src/main.js
@@ -1635,9 +1635,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"node-telegram-bot-api@npm:^0.60.0":
-  version: 0.60.0
-  resolution: "node-telegram-bot-api@npm:0.60.0"
+"node-telegram-bot-api@npm:^0.61.0":
+  version: 0.61.0
+  resolution: "node-telegram-bot-api@npm:0.61.0"
   dependencies:
     array.prototype.findindex: ^2.0.2
     bl: ^1.2.3
@@ -1648,7 +1648,7 @@ __metadata:
     pump: ^2.0.0
     request: ^2.83.0
     request-promise: ^4.2.2
-  checksum: a2dab5f7b61db10c84484e70daa716f656654822fb819dc3f385fa6ec0a40d7035809dc9863387e006598b4ded18360daa6a810ea5ff2d251ea2130ddf781d07
+  checksum: f3939a341107fd0137eaa0f24e31277ba9d1b988eff46acd0c774df2dede2227baaf83beb18e579456c8a6884e9e7db5020f8e25dc0fef5ec42d360a010ff8bd
   languageName: node
   linkType: hard
 
