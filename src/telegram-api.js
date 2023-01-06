@@ -28,10 +28,12 @@ export class Telegram {
 				media: got.stream(url),
 			})),
 		)
+		console.log('grouped images')
 		return Promise.all(
-			mediaGroups.map((mediaGroup) =>
-				this.bot.sendMediaGroup(chatId, mediaGroup),
-			),
+			mediaGroups.map((mediaGroup, idx) => {
+				console.log(`sending media group ${idx}`)
+				return this.bot.sendMediaGroup(chatId, mediaGroup)
+			}),
 		)
 	}
 	async run() {
