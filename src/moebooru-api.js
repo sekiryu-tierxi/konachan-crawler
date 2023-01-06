@@ -2,8 +2,8 @@ import got, { Options } from 'got'
 
 function filterSingleImageUrl(image) {
 	const MEGABYTE_CONSTANT = 1024 * 1024
-	if (image.file_size / MEGABYTE_CONSTANT < 10) return image.file_url
-	if (image.jpeg_file_size / MEGABYTE_CONSTANT < 10) return image.jpeg_url
+	if (image.file_size / MEGABYTE_CONSTANT < 5) return image.file_url
+	if (image.jpeg_file_size / MEGABYTE_CONSTANT < 5) return image.jpeg_url
 	return image.sample_url
 }
 
