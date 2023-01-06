@@ -39,7 +39,8 @@ while(retry <= options.retryLimit) {
     await bot.run()
     process.exit(0)
   } catch (e) {
-    console.error(e)
+    console.error(e.code + '\n')
+    console.error(e.response.body)
     retry++
     const current = Date.now()
     while(Date.now() - current <= options.retryInterval) {}
