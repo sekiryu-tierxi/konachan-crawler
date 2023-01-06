@@ -25,7 +25,7 @@ export class Telegram {
 		const mediaGroups = splitUrls.map((urls) =>
 			urls.map((url) => ({
 				type: 'photo',
-				media: got.stream(url),
+				media: url,
 			})),
 		)
 		console.log('grouped images')
