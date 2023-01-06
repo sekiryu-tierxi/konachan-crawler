@@ -29,6 +29,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./",\
           "packageDependencies": [\
             ["@types/node-telegram-bot-api", "npm:0.57.6"],\
+            ["cac", "npm:6.7.14"],\
             ["got", "npm:12.5.3"],\
             ["level", "npm:8.0.0"],\
             ["node-telegram-bot-api", "npm:0.60.0"],\
@@ -447,6 +448,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["buffer", "npm:6.0.3"],\
             ["base64-js", "npm:1.5.1"],\
             ["ieee754", "npm:1.2.1"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["cac", [\
+        ["npm:6.7.14", {\
+          "packageLocation": "./.yarn/cache/cac-npm-6.7.14-c46284e425-45a2496a94.zip/node_modules/cac/",\
+          "packageDependencies": [\
+            ["cac", "npm:6.7.14"]\
           ],\
           "linkType": "HARD"\
         }]\
@@ -1847,6 +1857,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [\
             ["moebooru-bot-nodejs", "workspace:."],\
             ["@types/node-telegram-bot-api", "npm:0.57.6"],\
+            ["cac", "npm:6.7.14"],\
             ["got", "npm:12.5.3"],\
             ["level", "npm:8.0.0"],\
             ["node-telegram-bot-api", "npm:0.60.0"],\

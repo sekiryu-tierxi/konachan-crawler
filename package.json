@@ -9,6 +9,7 @@
     "rome": "^11.0.0"
   },
   "dependencies": {
+    "cac": "^6.7.14",
     "got": "^12.5.3",
     "level": "^8.0.0",
     "node-telegram-bot-api": "^0.60.0"
