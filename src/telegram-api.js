@@ -1,6 +1,6 @@
 import TelegramBot from 'node-telegram-bot-api'
 import got from 'got'
-import { MoebooruInstance } from './moebooru-api'
+import { MoebooruInstance } from './moebooru-api.js'
 
 function splitArray(arr, by) {
 	const res = new Array(Math.ceil(arr.length / 10)).map(() => new Array())
@@ -11,8 +11,9 @@ function splitArray(arr, by) {
 }
 
 export class Telegram {
-	constructor(apiToken, baseUrl) {
+	constructor(apiToken, chatId, baseUrl) {
 		this.bot = new TelegramBot(apiToken)
+    this.chatId = chatId
 		this.moebooru = new MoebooruInstance(baseUrl)
 	}
 	batchUploadImage(chatId, urls) {
@@ -25,11 +26,11 @@ export class Telegram {
 		)
 		return this.bot.sendMediaGroup(chatId, mediaGroups)
 	}
-	async run(chatId) {
+	async run() {
 		const rawImageObjects = await this.moebooru.getPopularImageList()
 		const imageObjects = MoebooruInstance.filterImageUrl(rawImageObjects).map(
 			(x) => x.url,
 		)
-		return this.batchUploadImage(chatId, imageObjects)
+		return this.batchUploadImage(this.chatId, imageObjects)
 	}
 }
