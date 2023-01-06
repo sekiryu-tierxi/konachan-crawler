@@ -1,5 +1,5 @@
 import TelegramBot from 'node-telegram-bot-api'
-import got from 'got'
+import { sleep } from './util.js'
 import { MoebooruInstance } from './moebooru-api.js'
 
 function createGroups(arr, size) {
@@ -20,7 +20,7 @@ export class Telegram {
 		this.chatId = chatId
 		this.moebooru = new MoebooruInstance(baseUrl)
 	}
-	batchUploadImage(chatId, rawUrls) {
+	async batchUploadImage(chatId, rawUrls) {
 		const splitUrls = createGroups(rawUrls, 10)
 		const mediaGroups = splitUrls.map((urls) =>
 			urls.map((url) => ({
@@ -28,13 +28,10 @@ export class Telegram {
 				media: url,
 			})),
 		)
-		console.log('grouped images')
-		return Promise.all(
-			mediaGroups.map((mediaGroup, idx) => {
-				console.log(`sending media group ${idx}`)
-				return this.bot.sendMediaGroup(chatId, mediaGroup)
-			}),
-		)
+		mediaGroups.forEach(async (mediaGroup, idx) => {
+			await this.bot.sendMediaGroup(chatId, mediaGroup)
+      sleep(1000)
+		})
 	}
 	async run() {
 		const rawImageObjects = await this.moebooru.getPopularImageList()
