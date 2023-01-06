@@ -21,6 +21,6 @@ Then, clone the repository and run the program:
 ```sh
 git clone https://github.com/sekiryu-tierxi/konachan-popular-node
 cd konachan-popular-node
-yarn run main --config=config.yml
+yarn start -c [CHAT_ID] -t [TOKEN]
 ```
 
