@@ -1,4 +1,5 @@
 import TelegramBot from 'node-telegram-bot-api'
+import got from 'got'
 import { sleep } from './util.js'
 import { MoebooruInstance } from './moebooru-api.js'
 
